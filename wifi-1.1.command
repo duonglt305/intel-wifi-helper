@@ -127,7 +127,7 @@ show_preferred(){
         echo "$N. \033[31mBack.\033[00m"
         read ANSWER
         if [ $ANSWER -ge $N ]; then 
-            init $1 $2
+            init "$1" "$2"
         else
             connect_of_list "$ANSWER" "$1" "$2"
         fi
