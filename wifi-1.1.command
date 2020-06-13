@@ -170,7 +170,7 @@ init(){
 }
 
 _init(){
-    NETWORK_PATTERN="<key>$1<\/key><string>([a-zA-Z0-9_\-\#[:space:]\@\!\$\^\&\*\.\(\)\+\=\/\@]+)<\/string>(.*)<key>$2<\/key><string>([a-zA-Z0-9_\-\#[:space:]\@\!\$\^\&\*\.\(\)\+\=\/\@]*)<\/string>";
+    NETWORK_PATTERN="<key>$1<\/key><string>([a-zA-Z0-9_\-\#[:space:]\@\!\$\^\&\*\.\(\)\+\=\/]+)<\/string>(.*)<key>$2<\/key><string>([a-zA-Z0-9_\-\#[:space:]\@\!\$\^\&\*\.\(\)\+\=\/]*)<\/string>";
     if [[ $INFO_CONTENT =~ $NETWORK_PATTERN ]]; then
         if [ ! -z $PASSWORD ]; then
            echo $PASSWORD | sudo -S echo ""
